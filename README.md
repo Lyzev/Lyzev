@@ -11,6 +11,7 @@ I’m currently learning:
 - ✨ CSS
 - 📜 JavaScript
 - 🐍 Python
+#
 How to reach me:
 - Mail: lyzev.info@gmail.com
 - Discord: lyzev.#0911
