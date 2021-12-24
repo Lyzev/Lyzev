@@ -10,7 +10,7 @@ I’m currently learning:
 - 📍 HTML
 - ✨ CSS
 - 📜 JavaScript
-- 🐍 Python
+- 🧢 Kotlin
 #
 How to reach me:
 - Mail: lyzev.info@gmail.com
