@@ -15,6 +15,7 @@ I’m currently learning:
 How to reach me:
 - Mail: lyzev.info@gmail.com
 - Discord: lyzev.#0911
+- [Discord Server](https://discord.com/invite/5UmsQP4MFH)
 #
 ![Lyzev's GitHub stats](https://github-readme-stats.vercel.app/api?username=Lyzev&theme=dark&show_icons=true)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Lyzev&langs_count=8&theme=dark)
