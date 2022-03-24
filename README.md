@@ -5,15 +5,15 @@ Hey! I'm Lyzev, a student currently living in Austria. I'm preparing for high-sc
 <br>
 
 ```kotlin
-class Profile(var username: String, var location: String, var contact: Array<Array<String>>, var working: Array<String>) {
+class Profile(var username: String, var location: String, var contact: Map<String, String>, var working: Array<String>) {
 
     init {
         username = "Lyzev"
         location = "Austria"
-        contact = arrayOf(
-            arrayOf("Mail", "lyzev.info@gmail.com"),
-            arrayOf("Discord", "lyzev.#9727"),
-            arrayOf("Discord-Server", "https://discord.com/invite/5UmsQP4MFH")
+        contact = mapOf(
+            "Mail" to "lyzev.info@gmail.com",
+            "Discord" to "lyzev.#9727",
+            "Discord-Server" to "https://discord.com/invite/5UmsQP4MFH"
         )
         working = arrayOf(
             "Minecraft Modification",
