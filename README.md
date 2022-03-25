@@ -76,7 +76,7 @@ object Profile {
 [![Discord](https://img.shields.io/badge/Server-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/5UmsQP4MFH)
 [![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/id/lyzev_profile)
 
-## My Statistics
+<h2 align="center">My Statistics</h1>
 <div align="center">
     <img src="https://github-readme-stats.vercel.app/api?username=Lyzev&show_icons=true&theme=nightowl">
     <br>
