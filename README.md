@@ -59,12 +59,14 @@ class Profile(var username: String, var location: String, var contact: Map<Strin
 ![Fabric Modding](https://img.shields.io/badge/fabric_modding-62B47A.svg?style=for-the-badge&logo=minecraft&logoColor=white)
 
 ## Systems
-![Windows 10](https://img.shields.io/badge/windows_10-0078D6.svg?style=for-the-badge&logo=windows&logoColor=white)  
+![Windows 11](https://img.shields.io/badge/windows_11-0078D6.svg?style=for-the-badge&logo=windows&logoColor=white)
+![Windows 10](https://img.shields.io/badge/windows_10-0078D6.svg?style=for-the-badge&logo=windows&logoColor=white)
 ![Linux](https://img.shields.io/badge/linux-FCC624.svg?style=for-the-badge&logo=linux&logoColor=white)
 ![Android](https://img.shields.io/badge/android-3DDC84.svg?style=for-the-badge&logo=android&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/ubuntu-E95420.svg?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![Debian](https://img.shields.io/badge/debian-A81D33.svg?style=for-the-badge&logo=debian&logoColor=white)
 ![Kali Linux](https://img.shields.io/badge/kali_linux-557C94.svg?style=for-the-badge&logo=kalilinux&logoColor=white)
+![Kali Mint](https://img.shields.io/badge/linux_mint-87CF3E.svg?style=for-the-badge&logo=linuxmint&logoColor=white)
 ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
 
 ## Other
