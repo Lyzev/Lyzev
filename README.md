@@ -26,6 +26,8 @@ class Profile(var username: String, var location: String, var contact: Map<Strin
 }
 ```
 
+<br>
+
 ## Languages
 ![Kotlin](https://img.shields.io/badge/kotlin-7F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Java](https://img.shields.io/badge/java-007396.svg?style=for-the-badge&logo=java&logoColor=white)  
@@ -40,10 +42,10 @@ class Profile(var username: String, var location: String, var contact: Map<Strin
 ![OpenGL](https://img.shields.io/badge/OpenGL-%23FFFFFF.svg?style=for-the-badge&logo=opengl)
 
 ## IDE's
-![IntelliJ](https://img.shields.io/badge/intellij-000000?style=for-the-badge&logo=intellijidea&logoColor=white)  
-![PyCharm](https://img.shields.io/badge/pycharm-000000?style=for-the-badge&logo=pycharm&logoColor=white)  
-![WebStorm](https://img.shields.io/badge/webstorm-000000?style=for-the-badge&logo=webstorm&logoColor=white)  
-![PhpStorm](https://img.shields.io/badge/phpstorm-000000?style=for-the-badge&logo=phpstorm&logoColor=white) 
+![IntelliJ IDEA](https://img.shields.io/badge/intellij_idea-000000?style=for-the-badge&logo=intellijidea&logoColor=black&labelColor=087CFA)  
+![PyCharm](https://img.shields.io/badge/pycharm-000000?style=for-the-badge&logo=pycharm&logoColor=black&labelColor=21D789)  
+![WebStorm](https://img.shields.io/badge/webstorm-000000?style=for-the-badge&logo=webstorm&logoColor=black&labelColor=07C3F2)  
+![PhpStorm](https://img.shields.io/badge/phpstorm-000000?style=for-the-badge&logo=phpstorm&logoColor=black&labelColor=6B57FF)  
 
 ## Tools
 ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
@@ -54,14 +56,14 @@ class Profile(var username: String, var location: String, var contact: Map<Strin
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
-![Qodana](https://img.shields.io/badge/qodana-000000?style=for-the-badge&logo=qodana&logoColor=white)  
+![Qodana](https://img.shields.io/badge/qodana-000000?style=for-the-badge&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAIAAACQKrqGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAEXSURBVChTlU%2BxioNAFDQasoLYGZLOE%2BxsbLUSa9NbBGz8Cxv%2FwA%2FwS%2FwCrbQQRNFS0UJJE4QDo%2Fc89zgCV3gDu8ybnTfMHhBiXq%2BJ2IPjEWFGEAzDYPYnNuvtdqvrelmWoihUVQWlaRoYh2HwfR9HgPV6vT6fT9M0KYpyHKdt29PpBFZN0wRBiKLI8zxsNQwDHoBzHCeKIoRJkrRZQbRtO45jICScqqoul4ssy%2Ff7PQzDcRyhDOjrM0nqug6t1mHr6rouOGAb7sfjcT6fITVJEthJ05TnefAcwDpNn8BghmZ5nrMsW5aloigIob7vsyyb5%2Fk3dQ%2FWrjvxDyvualkWFr4RBEHXdXj4AU79eAdN05v%2Bhr3fIogv8mp63CHuAcAAAAAASUVORK5CYII%3D&labelColor=9D4AD8)
 ![JUnit5](https://img.shields.io/badge/junit5-25A162.svg?style=for-the-badge&logo=junit5&logoColor=white)
 ![Fabric Modding](https://img.shields.io/badge/fabric_modding-62B47A.svg?style=for-the-badge&logo=minecraft&logoColor=white)
 
 ## Systems
 ![Windows 11](https://img.shields.io/badge/windows_11-0078D6.svg?style=for-the-badge&logo=windows&logoColor=white)
 ![Windows 10](https://img.shields.io/badge/windows_10-0078D6.svg?style=for-the-badge&logo=windows&logoColor=white)
-![Linux](https://img.shields.io/badge/linux-FCC624.svg?style=for-the-badge&logo=linux&logoColor=white)
+![Linux](https://img.shields.io/badge/linux-000000.svg?style=for-the-badge&logo=linux&logoColor=000000&labelColor=FCC624)
 ![Android](https://img.shields.io/badge/android-3DDC84.svg?style=for-the-badge&logo=android&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/ubuntu-E95420.svg?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![Debian](https://img.shields.io/badge/debian-A81D33.svg?style=for-the-badge&logo=debian&logoColor=white)
