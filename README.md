@@ -5,8 +5,8 @@ Hey! I'm Lyzev, a student currently living in Austria. I'm preparing for high-sc
 ```kt
 object Profile {
 
-    val username = "Lyzev"
-    val location = "Austria"
+    const val username = "Lyzev"
+    const val location = "Austria"
     val contact = mapOf(
         "Mail" to "lyzev.info@gmail.com",
         "Discord" to "lyzev.#9727",
