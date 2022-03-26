@@ -1,4 +1,4 @@
-<h1 align="center">Lyzev</h1>
+<a href="https://lyzev.github.io/Lyzev/"><h1 align="center">Lyzev</h1></a>
 
 Hey! I'm Lyzev, a student currently living in Austria. I'm preparing for high-school diploma, and learning programming through small projects on the side.
 
