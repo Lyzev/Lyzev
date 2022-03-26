@@ -1,3 +1,5 @@
+const cache = new Map()
+
 const repocards = document.getElementsByTagName('gh-repocards')
 for (let i = 0; i < repocards.length; i++) {
     const url = 'https://api.github.com/users/' + repocards[i].getAttribute('user') + '/repos';
@@ -5,6 +7,9 @@ for (let i = 0; i < repocards.length; i++) {
     request.open("GET", url, false);
     request.send();
     const data = JSON.parse(request.responseText)
+    for (let i = 0; i < data.length; i++) {
+        cache.put(data[i].full_name, data[i])
+    }
     shuffle(data)
     for (let j = 0; j < Math.min(parseInt(repocards[i].getAttribute("repos")), data.length); j++) {
         const repocard = document.createElement('gh-repocard')
@@ -24,12 +29,14 @@ for (let i = 0; i < repocard.length; i++) {
 }
 
 async function generateRepocard(user, repo, container) {
-    const url = 'https://api.github.com/repos/' + user + '/' + repo;
-    const request = new XMLHttpRequest();
-    request.open("GET", url, false);
-    request.send();
-
-    const data = JSON.parse(request.responseText)
+    let data = cache.get(user + "/" + repo)
+    if (data == null) {
+        const url = 'https://api.github.com/repos/' + user + '/' + repo;
+        const request = new XMLHttpRequest();
+        request.open("GET", url, false);
+        request.send();
+        data = JSON.parse(request.responseText)
+    }
 
     const card = document.createElement('div');
     card.style.borderRadius = '10px'
