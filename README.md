@@ -72,9 +72,9 @@ object Profile {
 ![Spotify](https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white)
 
 ## Contact
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lyzev.info@gmail.com "lyzev.info@gmail.com")  
-[![Discord](https://img.shields.io/badge/Server-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/5UmsQP4MFH "𝐒𝐜𝐡𝐢𝐳𝐨𝐢𝐝 𝐛𝐲 𝐋𝐲𝐳𝐞𝐯")
-![lyzev.#9727](https://dcbadge.vercel.app/api/shield/434959223705829378 "lyzev.#9727")  
+![lyzev.#9727](https://dcbadge.vercel.app/api/shield/434959223705829378 "lyzev.#9727")
+[![Discord](https://img.shields.io/badge/Join%20now!-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/5UmsQP4MFH "𝐒𝐜𝐡𝐢𝐳𝐨𝐢𝐝 𝐛𝐲 𝐋𝐲𝐳𝐞𝐯")  
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lyzev.info@gmail.com "lyzev.info@gmail.com")
 [![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/id/lyzev_profile "lyzev.")
 
 <h2 align="center">My Statistics</h2>
