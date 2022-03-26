@@ -77,11 +77,9 @@ object Profile {
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lyzev.info@gmail.com "lyzev.info@gmail.com")
 [![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/id/lyzev_profile "lyzev.")
 
-<h2 align="center">My Statistics</h2>
-<div align="center">
-    <img src="profile-3d-contrib/profile-night-rainbow.svg" alt="GitHub Profile Stats" title="GitHub Profile Stats">
-    <br>
-    <img src="https://github-readme-stats.vercel.app/api?username=Lyzev&show_icons=true&theme=nightowl" alt="GitHub Profile Stats" title="GitHub Profile Stats">
-    <br>
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lyzev&theme=nightowl" alt="Top Languages" title="Top Languages">
-</div>
+## Statistics
+![Profile Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Lyzev&theme=github_dark)
+![Repos per lang](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Lyzev&theme=github_dark)
+![Most commit lang](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Lyzev&theme=github_dark)
+![Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Lyzev&theme=github_dark)
+![Productive time](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Lyzev&theme=github_dark)
