@@ -83,10 +83,3 @@ object Profile {
     <br>
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lyzev&theme=nightowl" alt="Top Languages" title="Top Languages">
 </div>
-
-<h2 align="center">Activity</h2>
-<div align="center">
-    <a href="https://spotify-github-profile.vercel.app/api/view?uid=nnitscj3amybezf3ez6cz65xz&redirect=true">
-        <img src="https://spotify-github-profile.vercel.app/api/view?uid=nnitscj3amybezf3ez6cz65xz&cover_image=true&theme=default&bar_color=53b14f&bar_color_cover=true" alt="Spotify Now Playing">
-    </a>
-</div>
