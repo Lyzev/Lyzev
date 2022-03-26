@@ -8,7 +8,7 @@ for (let i = 0; i < repocards.length; i++) {
     request.send();
     const data = JSON.parse(request.responseText)
     for (let i = 0; i < data.length; i++) {
-        cache.set(data[i].full_name, data[i])
+        cache.set(data[i].full_name.toUpperCase(), data[i])
     }
     shuffle(data)
     for (let j = 0; j < Math.min(parseInt(repocards[i].getAttribute("repos")), data.length); j++) {
@@ -29,7 +29,7 @@ for (let i = 0; i < repocard.length; i++) {
 }
 
 async function generateRepocard(user, repo, container) {
-    let data = cache.get(user + "/" + repo)
+    let data = cache.get((user + "/" + repo).toUpperCase())
     if (data == null) {
         const url = 'https://api.github.com/repos/' + user + '/' + repo;
         const request = new XMLHttpRequest();
