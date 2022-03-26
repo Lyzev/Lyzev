@@ -8,7 +8,7 @@ for (let i = 0; i < repocards.length; i++) {
     request.send();
     const data = JSON.parse(request.responseText)
     for (let i = 0; i < data.length; i++) {
-        cache.put(data[i].full_name, data[i])
+        cache.set(data[i].full_name, data[i])
     }
     shuffle(data)
     for (let j = 0; j < Math.min(parseInt(repocards[i].getAttribute("repos")), data.length); j++) {
