@@ -79,6 +79,8 @@ object Profile {
 
 <h2 align="center">My Statistics</h2>
 <div align="center">
+    <img src="profile-3d-contrib/profile-night-rainbow.svg" alt="GitHub Profile Stats" title="GitHub Profile Stats">
+    <br>
     <img src="https://github-readme-stats.vercel.app/api?username=Lyzev&show_icons=true&theme=nightowl" alt="GitHub Profile Stats" title="GitHub Profile Stats">
     <br>
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lyzev&theme=nightowl" alt="Top Languages" title="Top Languages">
