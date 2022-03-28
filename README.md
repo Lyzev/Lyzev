@@ -24,6 +24,23 @@ object Profile {
 
 ![Profile Stats](https://lyzev.github.io/Lyzev/profile-3d-contrib/profile-night-rainbow.svg)
 
+## GPG Public Key
+```
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEYkH8ehYJKwYBBAHaRw8BAQdAdJh7RXfO+u0eau+q6REXkL/I5UlG03lyjszH
+vYKMcNe0I0x5emV2IChTaWduKSA8bHl6ZXYuaW5mb0BnbWFpbC5jb20+iJAEExYI
+ADgWIQTGOWDXVUol+PJGyDYHg8bFeZYOgQUCYkH8egIbAwULCQgHAgYVCgkICwIE
+FgIDAQIeAQIXgAAKCRAHg8bFeZYOgWeHAQC4DVdNbPNR3SBVgROfyI+1kwr4tAPh
+CB0AZaJ0fNS6vwEArx0mn+kSE4UWsGq/NMOdr6lLhUWTEpxwj8ZCsp2bTw64OARi
+Qfx6EgorBgEEAZdVAQUBAQdAH4YEkKPnxxlM2hIQF109h7kBMxcAfEFv99ZBwo0B
+DV0DAQgHiHgEGBYIACAWIQTGOWDXVUol+PJGyDYHg8bFeZYOgQUCYkH8egIbDAAK
+CRAHg8bFeZYOgXxfAQC2g5hGLpML5ZUUeSAn2oeDAgPjE3Ex6xUb7UAYFyE+hwD9
+Fpd21LHJX0DwECxWyniaa4AVqMWwS0IsdKKUqvlZWAo=
+=j7Fj
+-----END PGP PUBLIC KEY BLOCK-----
+```
+
 ## Languages
 ![Kotlin](https://img.shields.io/badge/kotlin-7F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Java](https://img.shields.io/badge/java-007396.svg?style=for-the-badge&logo=java&logoColor=white)  
