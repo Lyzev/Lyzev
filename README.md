@@ -50,6 +50,7 @@ Fpd21LHJX0DwECxWyniaa4AVqMWwS0IsdKKUqvlZWAo=
 ![Markdown](https://img.shields.io/badge/markdown-000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
 
 ### Learning / Want to learn
+![C#](https://img.shields.io/badge/c%20sharp-FFFFFF?style=for-the-badge&logo=csharp&logoColor=189F20)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23FFFFFF.svg?style=for-the-badge&logo=typescript&logoColor=blue)
