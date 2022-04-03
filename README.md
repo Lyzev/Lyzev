@@ -58,9 +58,10 @@ Fpd21LHJX0DwECxWyniaa4AVqMWwS0IsdKKUqvlZWAo=
 
 ## IDE's
 ![IntelliJ IDEA](https://img.shields.io/badge/intellij_idea-000000?style=for-the-badge&logo=intellijidea&logoColor=black&labelColor=087CFA)  
-![PyCharm](https://img.shields.io/badge/pycharm-000000?style=for-the-badge&logo=pycharm&logoColor=black&labelColor=21D789)  
 ![WebStorm](https://img.shields.io/badge/webstorm-000000?style=for-the-badge&logo=webstorm&logoColor=black&labelColor=07C3F2)  
 ![PhpStorm](https://img.shields.io/badge/phpstorm-000000?style=for-the-badge&logo=phpstorm&logoColor=black&labelColor=6B57FF)  
+![PyCharm](https://img.shields.io/badge/pycharm-000000?style=for-the-badge&logo=pycharm&logoColor=black&labelColor=21D789)  
+![Rider](https://img.shields.io/badge/rider-000000?style=for-the-badge&logo=rider&logoColor=black&labelColor=DD1265) 
 
 ## Tools
 ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)  
