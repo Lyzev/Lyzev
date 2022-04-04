@@ -24,6 +24,7 @@ jobs:
           git push
   publish:
     runs-on: ubuntu-latest
+    name: generate README
     steps:
       - uses: actions/checkout@v2
         with:
