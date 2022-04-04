@@ -1,6 +1,6 @@
 <a href="https://lyzev.github.io/"><h1 align="center">Lyzev</h1></a>
 
-<h1 align="center"><!--TIMESTAMP:{"format": "23, 08 Mon 2021, 20:00:00"}--></h1>
+<h4 align="center">23, 08 Mon 2021, 20:00:00</h4>
 
 Hey! I'm Lyzev, a student currently living in Austria. I'm preparing for high-school diploma, and learning programming through small projects on the side.
 
