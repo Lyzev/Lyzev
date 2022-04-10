@@ -14,7 +14,7 @@ object Profile {
         "Discord" to "lyzev.#9727",
         "Discord-Server" to "https://discord.com/invite/5UmsQP4MFH"
     )
-    val todo = "https://github.com/users/Lyzev/projects/2"
+    const val todo = "https://github.com/users/Lyzev/projects/2"
 
 }
 ```
