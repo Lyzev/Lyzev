@@ -20,6 +20,7 @@ object Profile {
 ```
 
 ![Profile Stats](https://lyzev.github.io/Lyzev/profile-3d-contrib/profile-night-rainbow.svg)
+* Commits of private repos are included!
 
 ## GPG Public Key
 ```
