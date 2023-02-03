@@ -12,7 +12,7 @@ object Profile {
     val contact = mapOf(
         "Mail" to "lyzev.info@gmail.com",
         "Discord" to "lyzev.#9727",
-        "Discord-Server" to "https://discord.com/invite/5UmsQP4MFH"
+        "Discord-Server" to "https://discord.gg/Wfc3U8Dgn7"
     )
     const val todo = "https://github.com/users/Lyzev/projects/2"
 
