@@ -12,9 +12,8 @@ object Profile {
     val contact = mapOf(
         "Mail" to "lyzev.info@gmail.com",
         "Discord" to "lyzev.#9727",
-        "Discord-Server" to "https://discord.gg/Wfc3U8Dgn7"
+        "Discord-Server" to "https://lyzev.github.io/discord/"
     )
-    const val todo = "https://github.com/users/Lyzev/projects/2"
 
 }
 ```
@@ -94,8 +93,7 @@ Fpd21LHJX0DwECxWyniaa4AVqMWwS0IsdKKUqvlZWAo=
 ![Spotify](https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white)
 
 ## Contact
-![lyzev.#9727](https://dcbadge.vercel.app/api/shield/434959223705829378 "lyzev.#9727")
-[![Discord](https://img.shields.io/badge/Join%20now!-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/5UmsQP4MFH "𝐒𝐜𝐡𝐢𝐳𝐨𝐢𝐝 𝐛𝐲 𝐋𝐲𝐳𝐞𝐯")  
+[![Discord](https://img.shields.io/badge/Join%20now!-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://lyzev.github.io/discord/ "lyzev.#9727")  
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lyzev.info@gmail.com "lyzev.info@gmail.com")
 [![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/id/lyzev_profile "lyzev.")
 
