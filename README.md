@@ -76,7 +76,6 @@ object Profile {
 
 ## Contact
 [![Discord](https://img.shields.io/badge/Join%20now!-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://lyzev.github.io/discord/ "lyzev.#9727")  
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lyzev.info@gmail.com "lyzev.info@gmail.com")
 [![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/id/lyzev_profile "lyzev.")
 
 ## Statistics
