@@ -75,8 +75,7 @@ object Profile {
 ![Spotify](https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white)
 
 ## Contact
-[![Discord](https://img.shields.io/badge/Join%20now!-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://lyzev.github.io/discord/ "lyzev.#9727")  
-[![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/id/lyzev_profile "lyzev.")
+[![Discord](https://img.shields.io/badge/Join%20now!-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://lyzev.github.io/discord/ "lyzev.")  
 
 ## Statistics
 ![Profile Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Lyzev&theme=github_dark)
