@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions: write-all
     if: startsWith(github.event.issue.title, 'chess|')
+    concurrency:
+      group: chess-move
+      cancel-in-progress: false
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -41,4 +44,4 @@ jobs:
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: 'Make chess move'
+        commit_message: ${{ steps.execute_move.outputs.output }}
