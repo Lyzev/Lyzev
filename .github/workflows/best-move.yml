@@ -27,10 +27,10 @@ jobs:
           id: execute_best_move
           run: |
             output=$(python chess/chess-best-move.py)
-            echo "output=$output" >> $GITHUB_ENV
+            echo "output=$output" >> $GITHUB_OUTPUT
 
   call-issue-move:
     needs: best-move
     uses: ./.github/workflows/issue-move.yml
     with:
-      move: ${{ env.output }}
+      move: ${{ steps.execute_best_move.outputs.output }}
