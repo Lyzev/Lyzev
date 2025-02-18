@@ -47,7 +47,6 @@ jobs:
         commit_message: ${{ steps.execute_move.outputs.output }}
   respond-on-cancel:
     runs-on: ubuntu-latest
-    needs: execute-move
     if: ${{ needs.execute-move.result != 'success' }}
     steps:
       - name: Close Issue if workflow is running
