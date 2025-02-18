@@ -10,55 +10,51 @@ jobs:
     permissions: write-all
     if: startsWith(github.event.issue.title, 'chess|')
     steps:
-    - name: Check for running workflows
-      id: check_running
+    - name: Check for Running "Execute Chess Move" Workflows
+      id: check_workflow
       run: |
-        runs=$(gh api -X GET /repos/${{ github.repository }}/actions/runs \
-          -F status=in_progress -F event=issues -q '.workflow_runs | length')
-        echo "runs=$runs" >> $GITHUB_ENV
-
+        runs=$(gh run list --workflow="Execute Chess Move" --status="in_progress" --json run_number --jq '.[].run_number')
+        if [ -n "$runs" ]; then
+          echo "workflow_running=true" >> $GITHUB_ENV
+        else
+          echo "workflow_running=false" >> $GITHUB_ENV
+        fi
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Close Issue if workflow is running
-      if: env.runs != '0'
+      if: env.workflow_running == 'true'
       uses: peter-evans/close-issue@v3
       with:
         comment: 'There is currently a move in progress, please try again later.'
-
     - name: Checkout repository
-      if: env.runs == '0'
       uses: actions/checkout@v4
 
     - name: Set up Python
-      if: env.runs == '0'
       uses: actions/setup-python@v4
       with:
         python-version: '3.x'
 
     - name: Install dependencies
-      if: env.runs == '0'
       run: |
         python -m pip install --upgrade pip
         pip install -r chess/requirements.txt
 
     - name: Extract move from issue title
-      if: env.runs == '0'
       id: extract_move
       run: echo "move=$(echo '${{ github.event.issue.title }}' | cut -d'|' -f2)" >> $GITHUB_OUTPUT
 
     - name: Execute chess move
-      if: env.runs == '0'
       id: execute_move
       run: |
         output=$(python chess/chess-controller.py ${{ steps.extract_move.outputs.move }})
         echo "output=$output" >> $GITHUB_OUTPUT
 
     - name: Close Issue
-      if: env.runs == '0'
       uses: peter-evans/close-issue@v3
       with:
         comment: ${{ steps.execute_move.outputs.output }}
 
     - name: Commit and push changes
-      if: env.runs == '0'
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: ${{ steps.execute_move.outputs.output }}
