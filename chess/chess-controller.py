@@ -54,9 +54,9 @@ def board_to_markdown(board, legal_moves):
                 symbol = '![Empty](chess/assets/img/empty.svg)'
             board_md += f"| {symbol} "
         board_md += "|\n"
-    board_md += f"\nNext move: {'White' if board.turn else 'Black'}\n"
+    board_md += f"\n**Next move:** {'White' if board.turn else 'Black'}\n"
 
-    board_md += "\nLegal moves:\n\n"
+    board_md += "\n**Legal moves:**\n\n"
     board_md += "| Piece | Move |\n"
     board_md += "|-------|------|\n"
 

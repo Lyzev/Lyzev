@@ -23,6 +23,8 @@ Hi, I'm Lyzev <sup>⎡Бен⎤</sup>, a software developer from Central Europe.
 
 ## Community Chess
 
+Click one of the legal moves to play the game.
+
 ${CHESS}
 
 ## GitHub Activity
