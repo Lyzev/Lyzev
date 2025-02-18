@@ -29,14 +29,7 @@ jobs:
             output=$(python chess/chess-best-move.py)
             echo "output=$output" >> $GITHUB_OUTPUT
 
-        - name: Create Issue
-          run: |
-            gh issue create \
-              --title "$TITLE" \
-              --body "$BODY"
-          env:
-            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            GH_REPO: ${{ github.repository }}
-            TITLE: "chess|${{ steps.execute_best_move.outputs.output }}"
-            BODY: |
-              Best move for the current board state is ${{ steps.execute_best_move.outputs.output }}
+        - name: Make best move
+          uses: ./.github/workflows/issue-move.yml
+          with:
+            move: ${{ steps.execute_best_move.outputs.output }}
