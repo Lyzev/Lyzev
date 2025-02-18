@@ -1,8 +1,11 @@
 import chess
 import os
 import argparse
+from stockfish import Stockfish
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
+
+stockfish = Stockfish(path=script_dir + '/stockfish-ubuntu-x86-64-avx2', depth=16, parameters={"Threads": 2, "Minimum Thinking Time": 5})
 
 def load_board(filename):
     filepath = os.path.join(script_dir, filename)
@@ -55,6 +58,20 @@ def board_to_markdown(board, legal_moves):
             board_md += f"| {symbol} "
         board_md += "|\n"
     board_md += f"\n**Next move:** {'White' if board.turn else 'Black'}\n"
+
+    wdl = stockfish.get_wdl_stats()
+    win_percentage = wdl[0] / sum(wdl) * 100
+
+    win_percentage = max(0, min(100, win_percentage))
+    white_percentage = win_percentage
+    black_percentage = 100 - win_percentage
+
+    bar_length = 20
+    white_bar = int(bar_length * (white_percentage / 100))
+    black_bar = bar_length - white_bar
+    ascii_bar = f"{'█' * white_bar}{'░' * black_bar}\n {white_percentage:.1f}% White / {black_percentage:.1f}% Black\n"
+
+    board_md += f"\n**Win Percentage:**\n\n{ascii_bar}\n"
 
     board_md += "\n**Legal moves:**\n\n"
     board_md += "| Piece | Move |\n"
@@ -113,19 +130,17 @@ def main():
         if chess_move in legal_moves:
             board.push(chess_move)
             if board.is_checkmate():
-                os.remove(filename)
                 print(f"Checkmate! The game is over. {'Black' if board.turn else 'White'} wins.")
                 board = chess.Board()
             elif board.is_stalemate():
-                os.remove(filename)
                 print("Stalemate! The game is a draw.")
                 board = chess.Board()
             elif board.is_insufficient_material():
-                os.remove(filename)
                 print("Draw due to insufficient material.")
                 board = chess.Board()
             save_board(board, filename)
             legal_moves = list(board.legal_moves)
+            stockfish.set_fen_position(board.fen())
             save_board_markdown(board, 'board.md', legal_moves)
             create_readme('../README-TEMPLATE.md', 'board.md', '../README.md')
             print("Move made successfully.")
