@@ -30,6 +30,7 @@ jobs:
             echo "output=$output" >> $GITHUB_OUTPUT
 
   call-issue-move:
-      uses: ./.github/workflows/issue-move.yml
-      with:
-          move: ${{ needs.best-move.outputs.output }}
+    needs: best-move
+    uses: ./.github/workflows/issue-move.yml
+    with:
+      move: ${{ needs.best-move.outputs.output }}
