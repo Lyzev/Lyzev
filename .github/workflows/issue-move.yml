@@ -46,8 +46,11 @@ jobs:
       with:
         commit_message: ${{ steps.execute_move.outputs.output }}
 
-    - name: Close Issue if workflow is running
-      if: ${{ cancelled() || failure() }}
-      uses: peter-evans/close-issue@v3
-      with:
-        comment: 'There is currently a move in progress, please try again later.'
+  respond-on-cancel:
+    runs-on: ubuntu-latest
+    if: ${{ always() || needs.execute-move.result == 'cancelled' }}
+    steps:
+      - name: Close Issue if workflow is running
+        uses: peter-evans/close-issue@v3
+        with:
+          comment: 'There is currently a move in progress, please try again later.'
