@@ -11,7 +11,7 @@ jobs:
       permissions: write-all
       steps:
         - name: Checkout repository
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
 
         - name: Set up Python
           uses: actions/setup-python@v4
@@ -28,8 +28,11 @@ jobs:
           run: |
             output=$(python chess/chess-best-move.py)
             echo "output=$output" >> $GITHUB_OUTPUT
-
-        - name: Call issue-move workflow
-          uses: ./.github/workflows/issue-move.yml
-          with:
-              move: ${{ steps.execute_best_move.outputs.output }}
+  call-issue-move:
+    runs-on: ubuntu-latest
+    needs: best-move
+    steps:
+      - name: Call issue-move workflow
+        uses: ./.github/workflows/issue-move.yml
+        with:
+            move: ${{ needs.best-move.outputs.output }}
