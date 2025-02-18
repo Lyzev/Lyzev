@@ -26,14 +26,16 @@ jobs:
       - name: Execute best move
         id: execute_best_move
         run: |
-          output=$(python chess/chess-best-move.py)
+          move=$(python chess/chess-best-move.py)
+          echo "move=$move" >> $GITHUB_OUTPUT
+
+      - name: Execute chess move
+        id: execute_move
+        run: |
+          output=$(python chess/chess-controller.py ${{ steps.execute_best_move.outputs.output }})
           echo "output=$output" >> $GITHUB_OUTPUT
 
-    outputs:
-      best_move_output: ${{ steps.execute_best_move.outputs.output }}
-
-  call-issue-move:
-    needs: best-move
-    uses: ./.github/workflows/issue-move.yml
-    with:
-      move: ${{ needs.best-move.outputs.best_move_output }}
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: ${{ steps.execute_move.outputs.output }}
