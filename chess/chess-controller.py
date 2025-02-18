@@ -63,7 +63,7 @@ def board_to_markdown(board, legal_moves):
 
     if len(board.move_stack) > 0:
         last_move = board.peek()
-        board_md += f"\n**Last move:** {last_move} | {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+        board_md += f"\n**Last move:** {last_move} - {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
 
     wdl = stockfish.get_wdl_stats()
     win_percentage = (wdl[0] + wdl[1] / 2) / sum(wdl) * 100
