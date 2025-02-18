@@ -50,6 +50,8 @@ def board_to_markdown(board, legal_moves):
             symbol = ' '
             if piece is not None:
                 symbol = f"![{piece.symbol()}]({piece_svgs[piece.symbol()]})"
+            else:
+                symbol = '![Empty](chess/assets/img/empty.svg)'
             board_md += f"| {symbol} "
         board_md += "|\n"
     board_md += f"\nNext move: {'White' if board.turn else 'Black'}\n"
