@@ -21,17 +21,17 @@
 
 Hi, I'm Lyzev <sup>⎡Бен⎤</sup>, a software developer from Central Europe. I started programming in 2020 and learned Java as my first programming language. I contribute to various open source projects on GitHub, focusing on fixing bugs and adding new features. I also love reverse engineering and making mods for games.
 
-## Community Chess
+## :chess_pawn: Community Chess
 
-Click one of the legal moves to play the game.
+Click one of the legal moves below to play the game.
 
 ${CHESS}
 
-## GitHub Activity
+## :trophy: GitHub Activity
 
 ![Commit Activity](https://lyzev.dev/assets/img/Lyzev.svg)
 
-## Support
+## :envelope: Support
 
 Need assistance or have **minor** questions? Join our welcoming community on
 the [Discord server](https://lyzev.dev/discord). Our members and staff are always ready to help!
