@@ -9,47 +9,56 @@ jobs:
     runs-on: ubuntu-latest
     permissions: write-all
     if: startsWith(github.event.issue.title, 'chess|')
-    concurrency:
-      group: chess-move
-      cancel-in-progress: true
     steps:
+    - name: Check for running workflows
+      id: check_running
+      run: |
+        runs=$(gh api -X GET /repos/${{ github.repository }}/actions/runs \
+          -F status=in_progress -F event=issues -q '.workflow_runs | length')
+        echo "runs=$runs" >> $GITHUB_ENV
+
+    - name: Close Issue if workflow is running
+      if: env.runs != '0'
+      uses: peter-evans/close-issue@v3
+      with:
+        comment: 'There is currently a move in progress, please try again later.'
+
     - name: Checkout repository
+      if: env.runs == '0'
       uses: actions/checkout@v4
 
     - name: Set up Python
+      if: env.runs == '0'
       uses: actions/setup-python@v4
       with:
         python-version: '3.x'
 
     - name: Install dependencies
+      if: env.runs == '0'
       run: |
         python -m pip install --upgrade pip
         pip install -r chess/requirements.txt
 
     - name: Extract move from issue title
+      if: env.runs == '0'
       id: extract_move
       run: echo "move=$(echo '${{ github.event.issue.title }}' | cut -d'|' -f2)" >> $GITHUB_OUTPUT
 
     - name: Execute chess move
+      if: env.runs == '0'
       id: execute_move
       run: |
         output=$(python chess/chess-controller.py ${{ steps.extract_move.outputs.move }})
         echo "output=$output" >> $GITHUB_OUTPUT
 
     - name: Close Issue
-      uses: peter-evans/close-issue@v3
-      if: ${{ github.event.workflow_run.conclusion == 'cancelled' }}
-      with:
-        comment: 'There is currently a move in progress, please try again later.'
-
-    - name: Close Issue
-      if: ${{ github.event.workflow_run.conclusion != 'cancelled' }}
+      if: env.runs == '0'
       uses: peter-evans/close-issue@v3
       with:
         comment: ${{ steps.execute_move.outputs.output }}
 
     - name: Commit and push changes
-      if: ${{ github.event.workflow_run.conclusion != 'cancelled' }}
+      if: env.runs == '0'
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: ${{ steps.execute_move.outputs.output }}
