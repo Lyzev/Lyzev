@@ -65,10 +65,15 @@ def board_to_markdown(board, legal_moves):
         last_move = board.peek()
         board_md += f"\n**Last move:** {last_move} - {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
 
-    wdl = stockfish.get_wdl_stats()
-    win_percentage = (wdl[0] + wdl[1] / 2) / sum(wdl) * 100
-    if not board.turn:
-        win_percentage = 100 - win_percentage
+    evaluation = stockfish.get_evaluation()
+    win_percentage = 50
+    if evaluation["type"] == "cp":
+        win_percentage = 100 / (1 + 10 ** (-evaluation["value"] / 400))
+    elif evaluation["type"] == "mate":
+        if evaluation["value"] > 0:
+            win_percentage = 100
+        else:
+            win_percentage = 0
     win_percentage = max(0, min(100, win_percentage))
     white_percentage = win_percentage
     black_percentage = 100 - win_percentage
@@ -76,7 +81,7 @@ def board_to_markdown(board, legal_moves):
     bar_length = 20
     white_bar = int(bar_length * (white_percentage / 100))
     black_bar = bar_length - white_bar
-    ascii_bar = f"{"█" * white_bar}{"░" * black_bar}\n\n {white_percentage:.2f}% White / {black_percentage:.2f}% Black\n"
+    ascii_bar = f"{"█" * white_bar}{"░" * black_bar}\n\n {white_percentage:.1f}% White / {black_percentage:.1f}% Black\n"
 
     board_md += f"\n**Win Percentage:**\n\n{ascii_bar}\n"
 
