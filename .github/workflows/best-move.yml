@@ -29,7 +29,17 @@ jobs:
             output=$(python chess/chess-best-move.py)
             echo "output=$output" >> $GITHUB_OUTPUT
 
-        - name: Make best move
-          uses: ./.github/workflows/issue-move.yml
+        - name: Call issue-move workflow
+          uses: actions/github-script@v6
           with:
-            move: ${{ steps.execute_best_move.outputs.output }}
+            script: |
+              const { exec } = require('@actions/github');
+              await exec('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                workflow_id: 'issue-move.yml',
+                ref: context.ref,
+                inputs: {
+                  move: '${{ steps.execute_best_move.outputs.output }}'
+                }
+              });
