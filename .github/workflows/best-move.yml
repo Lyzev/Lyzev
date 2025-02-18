@@ -7,30 +7,33 @@ on:
 
 jobs:
   best-move:
-      runs-on: ubuntu-latest
-      permissions: write-all
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v4
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-        - name: Set up Python
-          uses: actions/setup-python@v4
-          with:
-            python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-        - name: Install dependencies
-          run: |
-            python -m pip install --upgrade pip
-            pip install -r chess/requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r chess/requirements.txt
 
-        - name: Execute best move
-          id: execute_best_move
-          run: |
-            output=$(python chess/chess-best-move.py)
-            echo "output=$output" >> $GITHUB_OUTPUT
+      - name: Execute best move
+        id: execute_best_move
+        run: |
+          output=$(python chess/chess-best-move.py)
+          echo "output=$output" >> $GITHUB_OUTPUT
+
+    outputs:
+      best_move_output: ${{ steps.execute_best_move.outputs.output }}
 
   call-issue-move:
     needs: best-move
     uses: ./.github/workflows/issue-move.yml
     with:
-      move: ${{ steps.execute_best_move.outputs.output }}
+      move: ${{ needs.best-move.outputs.best_move_output }}
