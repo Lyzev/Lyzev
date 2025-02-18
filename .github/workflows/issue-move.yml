@@ -3,6 +3,11 @@ name: Execute Chess Move
 on:
   issues:
     types: [opened]
+  workflow_call:
+    inputs:
+      move:
+        required: true
+        type: string
 
 jobs:
   execute-move:
@@ -31,10 +36,19 @@ jobs:
       id: extract_move
       run: echo "move=$(echo '${{ github.event.issue.title }}' | cut -d'|' -f2)" >> $GITHUB_OUTPUT
 
+    - name: Determine move
+      id: determine_move
+      run: |
+        if [ -n "${{ inputs.move }}" ]; then
+          echo "move=${{ inputs.move }}" >> $GITHUB_OUTPUT
+        else
+          echo "move=${{ steps.extract_move.outputs.move }}" >> $GITHUB_OUTPUT
+        fi
+
     - name: Execute chess move
       id: execute_move
       run: |
-        output=$(python chess/chess-controller.py ${{ steps.extract_move.outputs.move }})
+        output=$(python chess/chess-controller.py ${{ steps.determine_move.outputs.move }})
         echo "output=$output" >> $GITHUB_OUTPUT
 
     - name: Commit and push changes
