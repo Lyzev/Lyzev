@@ -4,7 +4,7 @@
         <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy-minimal/available/github_vector.svg&w=64&h=64" alt="GitHub">
     </a>
     <a href="https://lyzev.dev">
-        <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy-minimal/documentation/website_vector.svg&w=64&h=64" alt="Maven Central">
+        <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy-minimal/documentation/website_vector.svg&w=64&h=64" alt="Website">
     </a>
     <a href="https://central.sonatype.com/namespace/dev.lyzev.api">
         <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy-minimal/available/maven-central_vector.svg&w=64&h=64" alt="Maven Central">
@@ -13,7 +13,7 @@
         <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/social/discord-plural_vector.svg&w=64&h=64" alt="Discord">
     </a>
     <a href="https://www.youtube.com/@lyzev">
-        <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy-minimal/social/youtube-singular_vector.svg&w=64&h=64" alt="Discord">
+        <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy-minimal/social/youtube-singular_vector.svg&w=64&h=64" alt="YouTube">
     </a>
 </div>
 
