@@ -5,7 +5,7 @@ from stockfish import Stockfish
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
-stockfish = Stockfish(path=script_dir + '/stockfish-ubuntu-x86-64-avx2', depth=16, parameters={"Threads": 2, "Minimum Thinking Time": 5})
+stockfish = Stockfish(path=script_dir + '/stockfish-ubuntu-x86-64-avx2', depth=30, parameters={"Threads": 4, "Minimum Thinking Time": 10})
 
 def load_board(filename):
     filepath = os.path.join(script_dir, filename)
