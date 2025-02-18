@@ -11,7 +11,7 @@ jobs:
     if: startsWith(github.event.issue.title, 'chess|')
     concurrency:
       group: chess-move
-      cancel-in-progress: false
+      cancel-in-progress: true
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -38,10 +38,18 @@ jobs:
 
     - name: Close Issue
       uses: peter-evans/close-issue@v3
+      if: ${{ github.event.workflow_run.conclusion == 'cancelled' }}
+      with:
+        comment: 'There is currently a move in progress, please try again later.'
+
+    - name: Close Issue
+      if: ${{ github.event.workflow_run.conclusion != 'cancelled' }}
+      uses: peter-evans/close-issue@v3
       with:
         comment: ${{ steps.execute_move.outputs.output }}
 
     - name: Commit and push changes
+      if: ${{ github.event.workflow_run.conclusion != 'cancelled' }}
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: ${{ steps.execute_move.outputs.output }}
