@@ -1,0 +1,44 @@
+name: Best Move
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  best-move:
+      runs-on: ubuntu-latest
+      permissions:
+        contents: read
+        issues: write
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+
+        - name: Set up Python
+          uses: actions/setup-python@v4
+          with:
+            python-version: '3.x'
+
+        - name: Install dependencies
+          run: |
+            python -m pip install --upgrade pip
+            pip install -r chess/requirements.txt
+
+        - name: Execute best move
+          id: execute_best_move
+          run: |
+            output=$(python chess/chess-best-move.py)
+            echo "output=$output" >> $GITHUB_OUTPUT
+
+        - name: Create Issue
+          run: |
+            gh issue create \
+              --title "$TITLE" \
+              --body "$BODY")
+          env:
+            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GH_REPO: ${{ github.repository }}
+            TITLE: "chess|${{ steps.execute_best_move.outputs.output }}"
+            BODY: |
+              Best move for the current board state is ${{ steps.execute_best_move.outputs.output }}
