@@ -83,7 +83,7 @@ def board_to_markdown(board, legal_moves):
     black_bar = bar_length - white_bar
     ascii_bar = f"{"█" * white_bar}{"░" * black_bar}\n\n {white_percentage:.1f}% White / {black_percentage:.1f}% Black\n"
 
-    board_md += f"\n**Win Percentage:**\n\n{ascii_bar}\n"
+    board_md += f"\n**Evaluation:**\n\n{ascii_bar}\n"
 
     board_md += "\n**Legal moves:**\n\n"
     board_md += "| Piece | Move |\n"
