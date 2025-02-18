@@ -19,24 +19,24 @@ def save_board(board, filename):
 
 def board_to_markdown(board, legal_moves):
     piece_svgs = {
-        'P': 'assets/img/white/down/pawn.svg', 'N': 'assets/img/white/down/horse.svg',
-        'B': 'assets/img/white/down/bishop.svg',
-        'R': 'assets/img/white/down/tower.svg', 'Q': 'assets/img/white/down/queen.svg', 'K': 'assets/img/white/down/king.svg',
-        'p': 'assets/img/black/up/pawn.svg', 'n': 'assets/img/black/up/horse.svg',
-        'b': 'assets/img/black/up/bishop.svg',
-        'r': 'assets/img/black/up/tower.svg', 'q': 'assets/img/black/up/queen.svg', 'k': 'assets/img/black/up/king.svg'
+        'P': 'chess/assets/img/white/down/pawn.svg', 'N': 'chess/assets/img/white/down/horse.svg',
+        'B': 'chess/assets/img/white/down/bishop.svg',
+        'R': 'chess/assets/img/white/down/tower.svg', 'Q': 'chess/assets/img/white/down/queen.svg', 'K': 'chess/assets/img/white/down/king.svg',
+        'p': 'chess/assets/img/black/up/pawn.svg', 'n': 'chess/assets/img/black/up/horse.svg',
+        'b': 'chess/assets/img/black/up/bishop.svg',
+        'r': 'chess/assets/img/black/up/tower.svg', 'q': 'chess/assets/img/black/up/queen.svg', 'k': 'chess/assets/img/black/up/king.svg'
     }
 
     if board.turn:
         piece_svgs.update({
-            'P': 'assets/img/white/up/pawn.svg', 'N': 'assets/img/white/up/horse.svg',
-            'B': 'assets/img/white/up/bishop.svg',
-            'R': 'assets/img/white/up/tower.svg', 'Q': 'assets/img/white/up/queen.svg',
-            'K': 'assets/img/white/up/king.svg',
-            'p': 'assets/img/black/down/pawn.svg', 'n': 'assets/img/black/down/horse.svg',
-            'b': 'assets/img/black/down/bishop.svg',
-            'r': 'assets/img/black/down/tower.svg', 'q': 'assets/img/black/down/queen.svg',
-            'k': 'assets/img/black/down/king.svg'
+            'P': 'chess/assets/img/white/up/pawn.svg', 'N': 'chess/assets/img/white/up/horse.svg',
+            'B': 'chess/assets/img/white/up/bishop.svg',
+            'R': 'chess/assets/img/white/up/tower.svg', 'Q': 'chess/assets/img/white/up/queen.svg',
+            'K': 'chess/assets/img/white/up/king.svg',
+            'p': 'chess/assets/img/black/down/pawn.svg', 'n': 'chess/assets/img/black/down/horse.svg',
+            'b': 'chess/assets/img/black/down/bishop.svg',
+            'r': 'chess/assets/img/black/down/tower.svg', 'q': 'chess/assets/img/black/down/queen.svg',
+            'k': 'chess/assets/img/black/down/king.svg'
         })
 
     board_md = "|   | a | b | c | d | e | f | g | h |\n"
@@ -77,6 +77,17 @@ def save_board_markdown(board, filename, legal_moves):
     with open(filename, 'w') as file:
         file.write(board_to_markdown(board, legal_moves))
 
+def create_readme(template_path, board_path, output_path):
+    with open(template_path, 'r') as template_file:
+        template_content = template_file.read()
+
+    with open(board_path, 'r') as board_file:
+        board_content = board_file.read()
+
+    readme_content = template_content.replace('${CHESS}', board_content)
+
+    with open(output_path, 'w') as output_file:
+        output_file.write(readme_content)
 
 def main():
     parser = argparse.ArgumentParser(description='Chess board controller.')
@@ -108,6 +119,7 @@ def main():
             save_board(board, filename)
             legal_moves = list(board.legal_moves)
             save_board_markdown(board, 'board.md', legal_moves)
+            create_readme('../README-TEMPLATE.md', 'board.md', '../README.md')
             print("Move made successfully.")
         else:
             print("Invalid move.")
