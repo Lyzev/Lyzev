@@ -60,6 +60,14 @@ def board_to_markdown(board, legal_moves):
         board_md += "|\n"
     board_md += f"\n**Next move:** {"White" if board.turn else "Black"}\n"
 
+    board_md += "\n**Last move:**\n"
+    if len(board.move_stack) > 0:
+        last_move = board.peek()
+        board_md += f"\n{chess.square_name(last_move.from_square)} -> {chess.square_name(last_move.to_square)}\n"
+        board_md += f"\nDate: {last_move}\n"
+    else:
+        board_md += "\nNone\n"
+
     wdl = stockfish.get_wdl_stats()
     win_percentage = (wdl[0] + wdl[1] / 2) / sum(wdl) * 100
     if not board.turn:
