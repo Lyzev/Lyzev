@@ -11,7 +11,7 @@ jobs:
     if: startsWith(github.event.issue.title, 'chess|')
     concurrency:
       group: chess
-      cancel-in-progress: true
+      cancel-in-progress: false
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -45,12 +45,3 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: ${{ steps.execute_move.outputs.output }}
-
-    - name: Close Issue
-      if: always() && (failure() || cancelled())
-      uses: peter-evans/close-issue@v3
-      with:
-        comment: '⚠️ The chess move execution has failed. Try again later.'
-        labels: |
-            wontfix
-        close-reason: 'not_planned'
