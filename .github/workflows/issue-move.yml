@@ -47,6 +47,9 @@ jobs:
       if: ${{ failure() }}
       with:
         comment: "Failed to execute move. Try again later."
+        labels: |
+          wontfix
+        close-reason: 'not_planned'
 
     - name: Close Issue
       if: ${{ success() }}
