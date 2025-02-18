@@ -7,10 +7,7 @@ on:
 jobs:
   execute-move:
     runs-on: ubuntu-latest
-    permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the
-      # added or changed files to the repository.
-      contents: write
+    permissions: write-all
     if: startsWith(github.event.issue.title, 'chess|')
     steps:
     - name: Checkout repository
@@ -49,6 +46,8 @@ jobs:
 
     - name: Close Issue
       uses: peter-evans/close-issue@v3
+      with:
+        comment: 'Chess move executed.'
 
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v5
