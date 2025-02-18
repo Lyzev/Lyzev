@@ -36,12 +36,22 @@ jobs:
         output=$(python chess/chess-controller.py ${{ steps.extract_move.outputs.move }})
         echo "output=$output" >> $GITHUB_OUTPUT
 
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: ${{ steps.execute_move.outputs.output }}
+
     - name: Close Issue
       uses: peter-evans/close-issue@v3
       with:
         comment: ${{ steps.execute_move.outputs.output }}
 
-    - name: Commit and push changes
-      uses: stefanzweifel/git-auto-commit-action@v5
+  on-failure:
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    needs: execute-move
+    steps:
+    - name: Close Issue
+      uses: peter-evans/close-issue@v3
       with:
-        commit_message: ${{ steps.execute_move.outputs.output }}
+        comment: "Failed to execute move. Try again later."
