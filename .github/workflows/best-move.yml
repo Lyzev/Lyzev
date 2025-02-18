@@ -8,9 +8,7 @@ on:
 jobs:
   best-move:
       runs-on: ubuntu-latest
-      permissions:
-        contents: read
-        issues: write
+      permissions: write-all
       steps:
         - name: Checkout repository
           uses: actions/checkout@v4
@@ -35,7 +33,7 @@ jobs:
           run: |
             gh issue create \
               --title "$TITLE" \
-              --body "$BODY")
+              --body "$BODY"
           env:
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             GH_REPO: ${{ github.repository }}
