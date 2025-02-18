@@ -62,9 +62,8 @@ def board_to_markdown(board, legal_moves):
     board_md += f"\n**Next move:** {"White" if board.turn else "Black"}\n"
 
     if len(board.move_stack) > 0:
-        board_md += "\n**Last move:**\n"
         last_move = board.peek()
-        board_md += f"\n{chess.square_name(last_move.from_square)} -> {chess.square_name(last_move.to_square)} | {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+        board_md += f"\n**Last move:** {last_move} | {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
 
     wdl = stockfish.get_wdl_stats()
     win_percentage = (wdl[0] + wdl[1] / 2) / sum(wdl) * 100
