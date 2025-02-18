@@ -6,6 +6,7 @@ on:
 
 jobs:
   execute-move:
+    continue-on-error: true
     runs-on: ubuntu-latest
     permissions: write-all
     if: startsWith(github.event.issue.title, 'chess|')
@@ -43,15 +44,12 @@ jobs:
 
     - name: Close Issue
       uses: peter-evans/close-issue@v3
-      with:
-        comment: ${{ steps.execute_move.outputs.output }}
-
-  on-failure:
-    continue-on-error: true
-    runs-on: ubuntu-latest
-    needs: execute-move
-    steps:
-    - name: Close Issue
-      uses: peter-evans/close-issue@v3
+      if: ${{ failure() }}
       with:
         comment: "Failed to execute move. Try again later."
+
+    - name: Close Issue
+      if: ${{ success() }}
+      uses: peter-evans/close-issue@v3
+      with:
+        comment: ${{ steps.execute_move.outputs.output }}
