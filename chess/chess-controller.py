@@ -2,20 +2,21 @@ import chess
 import os
 import argparse
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 def load_board(filename):
-    if os.path.exists(filename):
-        with open(filename, 'r') as file:
+    filepath = os.path.join(script_dir, filename)
+    if os.path.exists(filepath):
+        with open(filepath, 'r') as file:
             board = chess.Board(file.read().strip())
     else:
         board = chess.Board()
     return board
 
-
 def save_board(board, filename):
-    with open(filename, 'w') as file:
+    filepath = os.path.join(script_dir, filename)
+    with open(filepath, 'w') as file:
         file.write(board.fen())
-
 
 def board_to_markdown(board, legal_moves):
     piece_svgs = {
@@ -74,19 +75,24 @@ def board_to_markdown(board, legal_moves):
 
 
 def save_board_markdown(board, filename, legal_moves):
-    with open(filename, 'w') as file:
+    filepath = os.path.join(script_dir, filename)
+    with open(filepath, 'w') as file:
         file.write(board_to_markdown(board, legal_moves))
 
 def create_readme(template_path, board_path, output_path):
-    with open(template_path, 'r') as template_file:
+    template_filepath = os.path.join(script_dir, template_path)
+    board_filepath = os.path.join(script_dir, board_path)
+    output_filepath = os.path.join(script_dir, output_path)
+
+    with open(template_filepath, 'r') as template_file:
         template_content = template_file.read()
 
-    with open(board_path, 'r') as board_file:
+    with open(board_filepath, 'r') as board_file:
         board_content = board_file.read()
 
     readme_content = template_content.replace('${CHESS}', board_content)
 
-    with open(output_path, 'w') as output_file:
+    with open(output_filepath, 'w') as output_file:
         output_file.write(readme_content)
 
 def main():
