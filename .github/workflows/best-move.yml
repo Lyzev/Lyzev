@@ -32,7 +32,7 @@ jobs:
       - name: Execute chess move
         id: execute_move
         run: |
-          output=$(python chess/chess-controller.py ${{ steps.execute_best_move.outputs.output }})
+          output=$(python chess/chess-controller.py ${{ steps.execute_best_move.outputs.move }})
           echo "output=$output" >> $GITHUB_OUTPUT
 
       - name: Commit and push changes
