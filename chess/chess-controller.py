@@ -77,7 +77,21 @@ def board_to_markdown(board, legal_moves, stats):
     for rank in ranks:
         board_md += f"| {rank} "
         for file in range(8):
-            piece = board.piece_at(chess.square(file, rank - 1))
+            # Determine the target square based on file and rank
+            target_square = chess.square(file, rank - 1)
+
+            # Check for unique legal move that ends on this square
+            unique_moves = [m for m in legal_moves if m.to_square == target_square]
+            if len(unique_moves) == 1:
+                move_to_issue = unique_moves[0].uci()
+                hyperlink_start = f"["
+                hyperlink_end = f"](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7C{move_to_issue}&body=Click+%27Create%27+to+submit+this+move.)"
+            else:
+                hyperlink_start = ""
+                hyperlink_end = ""
+
+            # Determine the image symbol based on whether there's a piece on the square and the square color
+            piece = board.piece_at(target_square)
             if piece is not None:
                 if (file + rank) % 2 == 0:
                     symbol = f"![{piece.symbol()}](chess/assets/img/light/{piece_svgs[piece.symbol()]})"
@@ -88,6 +102,9 @@ def board_to_markdown(board, legal_moves, stats):
                     symbol = "![Square](chess/assets/img/light/square.svg)"
                 else:
                     symbol = "![Square](chess/assets/img/dark/square.svg)"
+
+            # Wrap the symbol with the hyperlink if applicable
+            symbol = f"{hyperlink_start}{symbol}{hyperlink_end}"
             board_md += f"| {symbol} "
         board_md += "|\n"
     # --- Game Status Section ---
