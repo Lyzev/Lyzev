@@ -64,7 +64,7 @@ def board_to_markdown(board, legal_moves):
                     symbol = "![Square](chess/assets/img/dark/square.svg)"
             board_md += f"| {symbol} "
         board_md += "|\n"
-    board_md += f"\n**Next move:** {"White" if board.turn else "Black"}\n"
+    board_md += f"\n**Next to move:** {"White" if board.turn else "Black"}\n"
 
     if len(board.move_stack) > 0:
         last_move = board.peek()
