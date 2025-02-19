@@ -21,8 +21,9 @@
 
 Hi, I'm Lyzev <sup>⎡Бен⎤</sup>, a software developer from Central Europe. I started programming in 2020 and learned Java as my first programming language. I contribute to various open source projects on GitHub, focusing on fixing bugs and adding new features. I also love reverse engineering and making mods for games.
 
-## :chess_pawn: Community Chess
+## :chess_pawn: Community Chess Tournament
 
+Everyone is welcome to participate in the community chess tournament.
 Click one of the legal moves below to play the game.
 
 ${CHESS}
