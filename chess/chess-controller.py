@@ -25,24 +25,24 @@ def save_board(board, filename):
 
 def board_to_markdown(board, legal_moves):
     piece_svgs = {
-        "P": "chess/assets/img/white/down/pawn.svg", "N": "chess/assets/img/white/down/horse.svg",
-        "B": "chess/assets/img/white/down/bishop.svg",
-        "R": "chess/assets/img/white/down/tower.svg", "Q": "chess/assets/img/white/down/queen.svg", "K": "chess/assets/img/white/down/king.svg",
-        "p": "chess/assets/img/black/up/pawn.svg", "n": "chess/assets/img/black/up/horse.svg",
-        "b": "chess/assets/img/black/up/bishop.svg",
-        "r": "chess/assets/img/black/up/tower.svg", "q": "chess/assets/img/black/up/queen.svg", "k": "chess/assets/img/black/up/king.svg"
+        "P": "white/down/pawn.svg", "N": "white/down/horse.svg",
+        "B": "white/down/bishop.svg",
+        "R": "white/down/tower.svg", "Q": "white/down/queen.svg", "K": "white/down/king.svg",
+        "p": "black/up/pawn.svg", "n": "black/up/horse.svg",
+        "b": "black/up/bishop.svg",
+        "r": "black/up/tower.svg", "q": "black/up/queen.svg", "k": "black/up/king.svg"
     }
 
     if board.turn:
         piece_svgs.update({
-            "P": "chess/assets/img/white/up/pawn.svg", "N": "chess/assets/img/white/up/horse.svg",
-            "B": "chess/assets/img/white/up/bishop.svg",
-            "R": "chess/assets/img/white/up/tower.svg", "Q": "chess/assets/img/white/up/queen.svg",
-            "K": "chess/assets/img/white/up/king.svg",
-            "p": "chess/assets/img/black/down/pawn.svg", "n": "chess/assets/img/black/down/horse.svg",
-            "b": "chess/assets/img/black/down/bishop.svg",
-            "r": "chess/assets/img/black/down/tower.svg", "q": "chess/assets/img/black/down/queen.svg",
-            "k": "chess/assets/img/black/down/king.svg"
+            "P": "white/up/pawn.svg", "N": "white/up/horse.svg",
+            "B": "white/up/bishop.svg",
+            "R": "white/up/tower.svg", "Q": "white/up/queen.svg",
+            "K": "white/up/king.svg",
+            "p": "black/down/pawn.svg", "n": "black/down/horse.svg",
+            "b": "black/down/bishop.svg",
+            "r": "black/down/tower.svg", "q": "black/down/queen.svg",
+            "k": "black/down/king.svg"
         })
 
     board_md = "|   | a | b | c | d | e | f | g | h |\n"
@@ -52,11 +52,16 @@ def board_to_markdown(board, legal_moves):
         board_md += f"| {rank} "
         for file in range(8):
             piece = board.piece_at(chess.square(file, rank - 1))
-            symbol = " "
             if piece is not None:
-                symbol = f"![{piece.symbol()}]({piece_svgs[piece.symbol()]})"
+                if (file + rank) % 2 == 0:
+                    symbol = f"![{piece.symbol()}](chess/assets/img/light/{piece_svgs[piece.symbol()]})"
+                else:
+                    symbol = f"![{piece.symbol()}](chess/assets/img/dark/{piece_svgs[piece.symbol()]})"
             else:
-                symbol = "![Empty](chess/assets/img/empty.svg)"
+                if (file + rank) % 2 == 0:
+                    symbol = "![Square](chess/assets/img/light/square.svg)"
+                else:
+                    symbol = "![Square](chess/assets/img/dark/square.svg)"
             board_md += f"| {symbol} "
         board_md += "|\n"
     board_md += f"\n**Next move:** {"White" if board.turn else "Black"}\n"
