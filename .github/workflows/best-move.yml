@@ -37,4 +37,4 @@ jobs:
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: ${{ steps.execute_move.outputs.output }}
+          commit_message: ${{ steps.execute_best_move.outputs.move }}
