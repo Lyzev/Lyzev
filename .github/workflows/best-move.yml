@@ -32,8 +32,7 @@ jobs:
       - name: Execute chess move
         id: execute_move
         run: |
-          output=$(python chess/chess-controller.py ${{ steps.execute_best_move.outputs.move }})
-          echo "output=$output" >> $GITHUB_OUTPUT
+          python chess/chess-controller.py ${{ steps.execute_best_move.outputs.move }}
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
