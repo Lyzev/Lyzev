@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="banner.png" alt="Lyzev">
+    <img src="banner.png" alt="Lyzev" width="600px">
     <br>
     <a href="https://github.com/Lyzev">
         <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy-minimal/available/github_vector.svg&w=64&h=64" alt="GitHub">
