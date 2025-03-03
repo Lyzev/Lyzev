@@ -1,6 +1,4 @@
 <div align="center">
-    <img src="banner.png" alt="Lyzev" width="600px">
-    <br>
     <a href="https://github.com/Lyzev">
         <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy-minimal/available/github_vector.svg&w=64&h=64" alt="GitHub">
     </a>
@@ -20,7 +18,7 @@
 
 [//]: # (23, 08 Mon 2021, 20:00:00)
 
-Hi, I'm Lyzev <sup>⎡Бен⎤</sup>, a software developer from Central Europe. I started programming in 2020 and learned Java as my first programming language. I contribute to various open source projects on GitHub, focusing on fixing bugs and adding new features. I also love reverse engineering and making mods for games.
+Hi, I'm Lyzev <sup>⎡Бен⎤</sup>, a software developer from Central Europe. I started programming in 2020 and learned Java as my first programming language. I contribute to various open source projects on GitHub, focusing on fixing bugs and adding new features. I also love reverse engineering and making mods for games. ![Spelunky Shopkeeper](https://static.wikia.nocookie.net/spelunky/images/c/cd/Shopkeeper_HD.png/revision/latest/scale-to-height-down/18)
 
 ## :chess_pawn: Community Chess Tournament
 
