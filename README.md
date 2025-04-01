@@ -27,36 +27,37 @@ Click one of the legal moves below to play the game.
 
 |   | a | b | c | d | e | f | g | h |
 |---|---|---|---|---|---|---|---|---|
-| 1 | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) |
-| 2 | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) |
-| 3 | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) |
+| 8 | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![k](chess/assets/img/dark/black/down/king.svg) |
+| 7 | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | [![Square](chess/assets/img/light/square.svg)](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg6f7&body=Click+%27Create%27+to+submit+this+move.) | ![Square](chess/assets/img/dark/square.svg) | [![Square](chess/assets/img/light/square.svg)](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Ch6h7&body=Click+%27Create%27+to+submit+this+move.) |
+| 6 | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | [![Square](chess/assets/img/dark/square.svg)](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg6f6&body=Click+%27Create%27+to+submit+this+move.) | ![K](chess/assets/img/light/white/up/king.svg) | ![P](chess/assets/img/dark/white/up/pawn.svg) |
+| 5 | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | [![Square](chess/assets/img/light/square.svg)](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg6f5&body=Click+%27Create%27+to+submit+this+move.) | [![Square](chess/assets/img/dark/square.svg)](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg6g5&body=Click+%27Create%27+to+submit+this+move.) | [![Square](chess/assets/img/light/square.svg)](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg6h5&body=Click+%27Create%27+to+submit+this+move.) |
 | 4 | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) |
-| 5 | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) |
-| 6 | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![K](chess/assets/img/light/white/down/king.svg) | ![P](chess/assets/img/dark/white/down/pawn.svg) |
-| 7 | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) |
-| 8 | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | [![Square](chess/assets/img/dark/square.svg)](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg8f8&body=Click+%27Create%27+to+submit+this+move.) | ![k](chess/assets/img/light/black/up/king.svg) | [![Square](chess/assets/img/dark/square.svg)](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg8h8&body=Click+%27Create%27+to+submit+this+move.) |
+| 3 | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) |
+| 2 | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) |
+| 1 | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) | ![Square](chess/assets/img/dark/square.svg) | ![Square](chess/assets/img/light/square.svg) |
 
 ## Game Status
 
-- **Next to move:** `Black`
-- **Last move:** `f6g6` at 2025-04-01 19:16:20
+- **Next to move:** `White`
+- **Last move:** `g8h8` at 2025-04-01 20:22:54
 
 ## Evaluation (Stockfish)
 
 ██████████░░░░░░░░░░
 
-`50.6% White` / `49.4% Black`
+`51.2% White` / `48.8% Black`
 
 ## Legal Moves
 
 | **Piece** | **Move** |
 |:---------:|:--------:|
-| `g8` | [`g8h8`](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg8h8&body=Click+%27Create%27+to+submit+this+move.), [`g8f8`](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg8f8&body=Click+%27Create%27+to+submit+this+move.) |
+| `g6` | [`g6f7`](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg6f7&body=Click+%27Create%27+to+submit+this+move.), [`g6f6`](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg6f6&body=Click+%27Create%27+to+submit+this+move.), [`g6h5`](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg6h5&body=Click+%27Create%27+to+submit+this+move.), [`g6g5`](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg6g5&body=Click+%27Create%27+to+submit+this+move.), [`g6f5`](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Cg6f5&body=Click+%27Create%27+to+submit+this+move.) |
+| `h6` | [`h6h7`](https://github.com/Lyzev/Lyzev/issues/new?title=chess%7Ch6h7&body=Click+%27Create%27+to+submit+this+move.) |
 
 ## Game Statistics
 
-- **Moves in current game:** 247
-- **Total moves across all games:** 959
+- **Moves in current game:** 248
+- **Total moves across all games:** 960
 - **Games played:** 4
 - **White wins:** 2
 - **Black wins:** 2
