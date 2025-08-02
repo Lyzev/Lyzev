@@ -23,9 +23,12 @@ Hi, I'm Lyzev <sup>⎡Бен⎤</sup>, a software developer from Central Europe.
 ## :chess_pawn: Community Chess Tournament
 
 Everyone is welcome to participate in the community chess tournament.
-Click one of the legal moves below to play the game.
+Click one of the legal moves below to play the game. By participating, you also become a part of the contributor list of this repository.
 
 ${CHESS}
+
+### Players / Contributors
+![Contributors](https://readme-contribs.as93.net/contributors/Lyzev/Lyzev)
 
 ## :trophy: GitHub Activity
 
