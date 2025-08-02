@@ -4,8 +4,7 @@ import random
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
-stockfish = Stockfish(path=script_dir + "/stockfish-ubuntu-x86-64-avx2", depth=14, parameters={"Threads": 2, "Minimum Thinking Time": 3})
-stockfish.set_elo_rating(random.randint(1050, 1550))
+stockfish = Stockfish(path=script_dir + "/stockfish-ubuntu-x86-64-avx2", depth=4)
 
 if __name__ == "__main__":
     filepath = os.path.join(script_dir, "board.fen")

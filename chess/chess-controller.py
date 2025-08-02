@@ -50,24 +50,13 @@ def save_board(board, filename):
 
 def board_to_markdown(board, legal_moves, stats):
     piece_svgs = {
-        "P": "white/down/pawn.svg", "N": "white/down/horse.svg",
-        "B": "white/down/bishop.svg",
-        "R": "white/down/tower.svg", "Q": "white/down/queen.svg", "K": "white/down/king.svg",
-        "p": "black/up/pawn.svg", "n": "black/up/horse.svg",
-        "b": "black/up/bishop.svg",
-        "r": "black/up/tower.svg", "q": "black/up/queen.svg", "k": "black/up/king.svg"
+        "P": "white/pawn.svg", "N": "white/horse.svg",
+        "B": "white/bishop.svg",
+        "R": "white/tower.svg", "Q": "white/queen.svg", "K": "white/king.svg",
+        "p": "black/pawn.svg", "n": "black/horse.svg",
+        "b": "black/bishop.svg",
+        "r": "black/tower.svg", "q": "black/queen.svg", "k": "black/king.svg"
     }
-
-    if board.turn:
-        piece_svgs.update({
-            "P": "white/up/pawn.svg", "N": "white/up/horse.svg",
-            "B": "white/up/bishop.svg",
-            "R": "white/up/tower.svg", "Q": "white/up/queen.svg",
-            "K": "white/up/king.svg",
-            "p": "black/down/pawn.svg", "n": "black/down/horse.svg",
-            "b": "black/down/bishop.svg",
-            "r": "black/down/tower.svg", "q": "black/down/queen.svg", "k": "black/down/king.svg"
-        })
 
     board_md = "|   | a | b | c | d | e | f | g | h |\n"
     board_md += "|---|---|---|---|---|---|---|---|---|\n"
