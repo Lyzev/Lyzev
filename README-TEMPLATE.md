@@ -30,10 +30,6 @@ ${CHESS}
 ### Players / Contributors
 ![Contributors](https://readme-contribs.as93.net/contributors/Lyzev/Lyzev)
 
-## :trophy: GitHub Activity
-
-![Commit Activity](https://lyzev.dev/assets/img/Lyzev.svg)
-
 ## :envelope: Support
 
 Need assistance or have **minor** questions? Join our welcoming community on
