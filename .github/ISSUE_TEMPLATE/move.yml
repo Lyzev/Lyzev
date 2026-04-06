@@ -1,13 +1,9 @@
 name: Chess Move
 description: Submit a chess move
-title: "chess|e2e4"
+title: "chess|"
 labels: ["move"]
 body:
-  - type: input
-    id: move
+  - type: markdown
     attributes:
-      label: Move (in UCI format)
-      description: The move you want to play. E.g., e2e4
-      placeholder: e2e4
-    validations:
-      required: true
+      value: |
+        Please write your move in the **title** of this issue, right after `chess|` (for example, `chess|e2e4`).
