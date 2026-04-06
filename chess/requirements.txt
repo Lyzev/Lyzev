@@ -1,2 +1,3 @@
-chess==1.11.1
-stockfish==3.28.0
+chess
+stockfish
+pytest

@@ -1,2 +1,4 @@
-.idea
+.idea/*
+!.idea/copyright/*
+.venv
 chess/board.md

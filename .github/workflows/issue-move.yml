@@ -8,19 +8,25 @@ jobs:
   execute-move:
     continue-on-error: true
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions:
+      contents: write
+      issues: write
     if: startsWith(github.event.issue.title, 'chess|')
     concurrency:
       group: chess
       cancel-in-progress: false
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v6
       with:
         python-version: '3.x'
+        cache: 'pip'
+
+    - name: Install system dependencies
+      run: sudo apt-get update && sudo apt-get install -y stockfish
 
     - name: Install dependencies
       run: |
@@ -29,16 +35,20 @@ jobs:
 
     - name: Extract move from issue title
       id: extract_move
-      run: echo "move=$(echo '${{ github.event.issue.title }}' | cut -d'|' -f2)" >> $GITHUB_OUTPUT
+      env:
+        TITLE: ${{ github.event.issue.title }}
+      run: echo "move=$(echo "$TITLE" | cut -d'|' -f2)" >> "$GITHUB_OUTPUT"
 
     - name: Execute chess move
       id: execute_move
       run: |
-        output=$(python chess/chess-controller.py ${{ steps.extract_move.outputs.move }})
-        echo "output=$output" >> $GITHUB_OUTPUT
+        output=$(python chess/chess-controller.py "${{ steps.extract_move.outputs.move }}")
+        echo "output<<EOF" >> "$GITHUB_OUTPUT"
+        echo "$output" >> "$GITHUB_OUTPUT"
+        echo "EOF" >> "$GITHUB_OUTPUT"
 
     - name: Commit and push changes
-      uses: stefanzweifel/git-auto-commit-action@v5
+      uses: stefanzweifel/git-auto-commit-action@v7
       with:
         commit_message: ${{ steps.execute_move.outputs.output }}
 
