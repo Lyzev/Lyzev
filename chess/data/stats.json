@@ -1,8 +1,8 @@
 {
-    "games_played": 35,
-    "white_wins": 11,
+    "games_played": 36,
+    "white_wins": 12,
     "black_wins": 21,
     "draws": 3,
-    "total_moves": 6539,
-    "current_game_moves": 102
+    "total_moves": 6540,
+    "current_game_moves": 0
 }
